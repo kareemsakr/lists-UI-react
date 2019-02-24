@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import Logger from "./LogService";
 
 Axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+console.log(process.env.REACT_APP_API_URL);
 //Axios.defaults.headers.common["x-auth-token"] = auth.getJwt();//this is a bi directional dependancy because auth module needs http module and vice versa
 function setJwt(jwt) {
   Axios.defaults.headers.common["x-auth-token"] = jwt;
